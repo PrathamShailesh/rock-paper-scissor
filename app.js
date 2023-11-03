@@ -8,11 +8,9 @@ const chandscissor = document.querySelector(".chand-scissor");
 const computerscore = document.querySelector(".computer_score");
 const winp =document.querySelector(".winp")
 const winc =document.querySelector(".winc")
-const playagain=document.querySelector(".play_again");
+const playagainp=document.querySelector(".play_againp");
+const playagainc=document.querySelector(".play_againc");
 
-playagain.addEventListener('click', (event) => {
-  window.location.reload();
-});
 
 human = 0;
 
@@ -26,16 +24,16 @@ function randomnum() {
 btns.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (gameIsOver) {
-        return;
+      return;
     }
     if (event.currentTarget.classList.contains("rock")) {
       computer();
       human = 1;
       score();
-
+      
       handrock.style.display = "block";
       handpaper.style.display = "none";
-
+      
       handscissor.style.display = "none";
     } else if (event.currentTarget.classList.contains("paper")) {
       computer();
@@ -85,14 +83,14 @@ let gameIsOver = false;
 
 
 function score() {
-    if (gameIsOver) {
-        return;
-    }
-    computer();
+  if (gameIsOver) {
+    return;
+  }
+  computer();
   const humanscore = document.querySelector(".human_score");
   const computerscore = document.querySelector(".computer_score");
-
-
+  
+  
   if (human === 1 && computer_point === 2) {
     cscore += 1;
     computerscore.innerText = cscore;
@@ -112,23 +110,30 @@ function score() {
     hscore += 1;
     humanscore.innerText = hscore;
   }
-
+  
   if (hscore === 5 || cscore === 5) {
     gameIsOver = true;
     
     if(hscore==5){
-    winp.style.display="block"
-
-  }else if(cscore==5){
-    winc.style.display="block"
-
+      winp.style.display="block"
+      
+    }else if(cscore==5){
+      winc.style.display="block"
+      
+    }
   }
-}
 }
 
 function win() {
-    if (hscore === 5 || cscore === 5) {
-        gameIsOver = true;
-
-    }
+  if (hscore === 5 || cscore === 5) {
+    gameIsOver = true;
+    
+  }
 }
+
+playagainp.addEventListener('click', () => {
+  window.location.reload();
+});
+playagainc.addEventListener('click', () => {
+  window.location.reload();
+});
