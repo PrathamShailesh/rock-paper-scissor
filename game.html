@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="score"><span class="human_score">0 </span>-<span class="computer_score"> 0</span></div>
+    <div class="play-spot">
+        <div class="player">
+            <div class="name">
+                <h2>You</h2>
+            </div>
+            <div class="player-hand">
+                <img src="/assets/rock-hand.png" alt="" class="hand-rock" style="display: none;">
+                <img src="/assets/paper-hand.png" alt="" class="hand-paper" style="display: none;">
+                <img src="/assets/scissors-hand.png" alt="" class="hand-scissor" style="display: none;">
+            </div>
+            <div class="button">
+                <div class="rock buttons"><img src="/assets/rock-logo.png" ></div>
+                <div class="paper buttons"><img src="/assets/paper-logo.png" alt="" ></div>
+                <div class="scissor buttons"><img src="/assets/scissors-logo.png" alt="" ></div>
+            </div>
+        </div>
+        <div class="vs">
+            <img src="/assets/vs.png" alt="">
+        </div>
+        <div class="player">
+            <div class="name">
+                <h2>Computer</h2>
+            </div>
+            <div class="computer-hand">
+                <img src="/assets/rock-hand.png" alt="" class="chand-rock" style="display: none;">
+                <img src="/assets/paper-hand.png" alt="" class="chand-paper" style="display: none;">
+                <img src="/assets/scissors-hand.png" alt="" class="chand-scissor" style="display: none;">
+                
+
+            </div>
+        </div>
+          
+    </div>
+    <div class="winp win" style="display: none;">
+        <h2 class="p">You Won The Game</h2>
+        <div class="play_again"><h1>Play Again</h1></div>
+    </div>
+    <div class="winc win" style="display: none;">
+        <h2 class="p">You Lost The Game</h2>
+        <div class="play_again"><h1>Play Again</h1></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
