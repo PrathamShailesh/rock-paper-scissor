@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body{
-    background-image: url("./assets/bg.png");
+    background-image: url("/assets/bg.png");
     background-size: cover;
     background-color: #070707;
     background-repeat: no-repeat;
